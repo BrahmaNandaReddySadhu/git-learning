@@ -428,3 +428,46 @@ git push origin master
 
 
 
+Branching concepts:
+By default branch name is main , Previously it was the master 
+
+what is the use of branch ?
+
+
+
+D:\GIT PRACTISE>dir .git
+ Volume in drive D is brahma
+ Volume Serial Number is 3602-7427
+
+ Directory of D:\GIT PRACTISE\.git
+
+26-11-2022  19:11                19 COMMIT_EDITMSG
+26-11-2022  19:08               258 config
+26-11-2022  18:52                73 description
+26-11-2022  19:07               115 FETCH_HEAD
+26-11-2022  19:07                23 HEAD
+26-11-2022  18:52    <DIR>          hooks
+26-11-2022  19:11               369 index
+26-11-2022  18:52    <DIR>          info
+26-11-2022  18:53    <DIR>          logs
+26-11-2022  18:52    <DIR>          objects
+26-11-2022  19:07                41 ORIG_HEAD
+26-11-2022  19:08                46 packed-refs
+26-11-2022  19:00    <DIR>          refs
+               8 File(s)            944 bytes
+               5 Dir(s)  106,330,996,736 bytes free
+               
+               
+               
+ 
+ you should never commit anything on the master or main branch , 
+ 
+ Because these main or master  branch code is real application where the customers using it  
+  and if we directly commit any changes here existing functionality might be break, what ever the code i have commited to main branch might have some 
+  bugs or errors , so we need to maintain seperate branch for the code which is not finalized , so if we maintain seperate branch users will not affected 
+  
+  so thats why we need to create seperate branch and continue our developemnt
+  
+               
+
+
