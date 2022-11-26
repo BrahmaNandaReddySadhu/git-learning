@@ -34,4 +34,397 @@ Bit Bucket , GitLabs are the there alternatives to git hub
 2) How to use the Git 
 
 goto ->  https://git-scm.com/downloads 
-Based on the Operating system you are uing just download it 
+Based on the Operating system you are uing just download it and Install it 
+
+
+Open cmd -> enter command  "git"
+Then it display all the git related information so , congrats you sucessfully installed got in your machine
+
+
+Creating New Folder:
+
+mkdir project     : this command create a new folder with the name "project" 
+cd project        :  move inside the project folder
+
+D:\BrahmaNandaReddySadhu\GitHub>cd project
+
+
+
+If we made any chnanges , all the histories will be stored in the another folder (repository)  provided by git (.git) which is hidden by default
+
+We can get this .git folder by  using cmd ->  git init
+
+git init  -> initialize empty .git repository
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git init
+Initialized empty Git repository in D:/BrahmaNandaReddySadhu/GitHub/project/.git/
+
+
+
+Now after entering the git init cmd , any change you have made in this project those will be recorded
+Now try to make any change like add new file here  by enetring command
+
+type nul> names.txt  :  this will create a file name with name "names"
+
+D:\BrahmaNandaReddySadhu\GitHub\project>type nul> names.txt
+
+since i have made one change ( Creating new file "names" ) .git file identify you have made one change 
+
+If you want to see changes , you can use command
+
+git status  : it will show what are the changes made under untracked files 
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        names.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+if you want to track the changes you have made and make it stored in the history then you need to add the file name "names.text "  then only it track this file 
+
+git add .          : add all changes to staging 
+git add names.txt  : add the names.txt file to staging 
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git add .
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   names.txt
+
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git commit -m "New File added"
+[master (root-commit) c3db764] New File added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 names.txt
+
+
+
+Again type cmd :   git status : now names.txt file is 
+
+If you commit then changes are permanenty stored in the git history
+
+git commit -m "messages"
+D:\BrahmaNandaReddySadhu\GitHub\project>git commit -m "New File added"
+[master (root-commit) c3db764] New File added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 names.txt
+ 
+ 
+ If I add some dat in the file "names.txt " then again check the status 
+ 
+ D:\BrahmaNandaReddySadhu\GitHub\project>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   names.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+ 
+ Add the changes to staging  and chec status
+ 
+ D:\BrahmaNandaReddySadhu\GitHub\project>git add .
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   names.txt
+
+ 
+ 
+ 
+ If you want to remove after adding to staging we can done by using cmd
+ 
+ git restore --staged names.txt
+ 
+ D:\BrahmaNandaReddySadhu\GitHub\project>git  restore --staged names.txt
+ 
+ 
+ D:\BrahmaNandaReddySadhu\GitHub\project>git  restore --staged names.txt
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   names.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ 
+Add the file and commit it 
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git commit -m "Names are added in the names.txt file"
+[master 8836d78] Names are added in the names.txt file
+ 1 file changed, 4 insertions(+)
+ 
+ since here it showing 4 insertions because we have added lines of the data in the file names.txt file
+ 
+
+
+If you want to see all the commit information then you can use "git  log"
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git log
+commit 8836d78df2b47de81a2fe424a54f8972c02b743a (HEAD -> master)
+Author: BrahmaNandaReddySadhu <sadhubrahmanandareddy@gmail.com>
+Date:   Sat Nov 26 15:24:26 2022 +0530
+
+    Names are added in the names.txt file
+
+commit c3db764de1926a3c4fe8426e717cb64822f86d9e
+Author: BrahmaNandaReddySadhu <sadhubrahmanandareddy@gmail.com>
+Date:   Sat Nov 26 15:11:30 2022 +0530
+
+    New File added
+
+If suppose I am deleting the file and commited it 
+
+D:\BrahmaNandaReddySadhu\GitHub\project>del names.txt
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    names.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git add .
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    names.txt
+
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git commit -m "file deleted "
+[master f23b66c] file deleted
+ 1 file changed, 4 deletions(-)
+ delete mode 100644 names.txt
+
+
+check the logs 
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git log
+commit f23b66c15aaa99a14412e7fc73493833025c90a4 (HEAD -> master)
+Author: BrahmaNandaReddySadhu <sadhubrahmanandareddy@gmail.com>
+Date:   Sat Nov 26 15:32:21 2022 +0530
+
+    file deleted
+
+commit 8836d78df2b47de81a2fe424a54f8972c02b743a
+Author: BrahmaNandaReddySadhu <sadhubrahmanandareddy@gmail.com>
+Date:   Sat Nov 26 15:24:26 2022 +0530
+
+    Names are added in the names.txt file
+
+commit c3db764de1926a3c4fe8426e717cb64822f86d9e
+Author: BrahmaNandaReddySadhu <sadhubrahmanandareddy@gmail.com>
+Date:   Sat Nov 26 15:11:30 2022 +0530
+
+    New File added
+
+
+
+
+
+so I want to goto version which is New File created state , 
+
+git reset commit id
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git reset c3db764de1926a3c4fe8426e717cb64822f86d9e
+Unstaged changes after reset:
+D       names.txt
+
+
+After reset to my specified commit all the commit above it will not be there 
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git log
+commit c3db764de1926a3c4fe8426e717cb64822f86d9e (HEAD -> master)
+Author: BrahmaNandaReddySadhu <sadhubrahmanandareddy@gmail.com>
+Date:   Sat Nov 26 15:11:30 2022 +0530
+
+    New File added
+
+
+only one commit information is avaiable 
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    names.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+
+
+I have maded some changes in files and I dont want to commit these chnages and I dot want to loss my changes , i just want to store in some place 
+and when ever i required i just call those , so this can be done by cmd git stash
+
+
+D:\BrahmaNandaReddySadhu\GitHub\project>type nul> surname.txt
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    names.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        surname.txt
+
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git add .
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    names.txt -> surname.txt
+
+
+D:\BrahmaNandaReddySadhu\GitHub\project>vi surname.txt
+'vi' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git houses.txt
+git: 'houses.txt' is not a git command. See 'git --help'.
+
+D:\BrahmaNandaReddySadhu\GitHub\project>type nul>hoses.txt
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    names.txt -> surname.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   surname.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hoses.txt
+
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git add .
+
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    names.txt -> hoses.txt
+        new file:   surname.txt
+
+
+
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    names.txt -> hoses.txt
+        new file:   surname.txt
+
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git stash
+Saved working directory and index state WIP on master: c3db764 New File added
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    names.txt -> hoses.txt
+        new file:   surname.txt
+
+
+D:\BrahmaNandaReddySadhu\GitHub\project>got stats
+
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    names.txt -> hoses.txt
+        new file:   surname.txt
+
+
+
+
+Now if i want to access all the changes stored in the stash area , i can make it available using the cmd
+
+git stash pop
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git stash pop
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   hoses.txt
+        new file:   surname.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    names.txt
+
+Dropped refs/stash@{0} (123a7d9810225675dfa7888d0a6a5df6bb18850f)
+
+
+
+If I want to claer all the data in the stash I can use the Comand "git stash clear"
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git stash clear
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git stash
+Saved working directory and index state WIP on master: c3db764 New File added
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git stash clear
+
+D:\BrahmaNandaReddySadhu\GitHub\project>git stash pop
+No stash entries found.
+
+
+
+Now I need to establish the connection between my remote repository URL and My Local project folder 
+Now I want to send this code to my remote repository
+
+we can done by using the command : git >git remote add origin https://github.com/BrahmaNandaReddySadhu/git-learning.g
+remote : you are dealing with URLs
+Add    : adding a new URL
+origin : what is the name of the url you are goind to add 
+
+
+Now once the connection established , then i need to send my local to url using , this can be done by using cmd
+git push origin master
+
+
+
