@@ -1,0 +1,37 @@
+1) why Git and Git Hub?
+
+case1:
+
+Imagine I have One application it working fine now 
+let Assume that I have added new Functionality to my existing application , after adding new Functionality my application is breaking or not working.
+Now I want to go back to my previous version of the code where my application is working fine earlier before adding the new feature or functionality,
+
+so Git and Git hub came into picture 
+It Saving or Maintains History of the project like what are the changes you have made on specific dates ,in which are the files you have made changes all those inforation it tracks 
+
+Case 2:
+
+You are Contributing to the open source Project where thousand of the people are Contributing , how these people share their code and make their code accessibe to all other open source contributing 
+members ? throug  Git and git hub we can do all these things 
+
+So  git and github allow to Maintain the History of the Project 
+ie what are the changes made by which person , in which folder at what times all those information is stored 
+
+
+Git :
+Git is version control system which Maintain the History of the projects ie 
+if anyone made some changes - what are the changes he had made to which file in the project and at what time he had made all these informatons will be stored
+
+Git hub : 
+Git hub is platform or online Website which allow us to host the Git repositories
+repository is nothing but a folder where all the changes are saved
+
+
+Bit Bucket , GitLabs are the there alternatives to git hub
+
+*****************************************************************************************************************************************************************
+
+2) How to use the Git 
+
+goto ->  https://git-scm.com/downloads 
+Based on the Operating system you are uing just download it 
