@@ -1,6 +1,0 @@
-hi
-
-this is the first line of the commit 
-
-
-this is the second time changes
