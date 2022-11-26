@@ -467,7 +467,10 @@ D:\GIT PRACTISE>dir .git
   bugs or errors , so we need to maintain seperate branch for the code which is not finalized , so if we maintain seperate branch users will not affected 
   
   so thats why we need to create seperate branch and continue our developemnt
-  
-               
+ 
+ you cn create a new branch using the command    " git branch branchname"
+ 
+once yu create you need to ceckout to created branch , this can be done by using command "git checkout branchname
+
 
 
